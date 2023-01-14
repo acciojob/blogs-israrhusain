@@ -6,7 +6,7 @@ import java.util.*;
 
 @Entity
 @Table
-public class Blog{
+public class Blog {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private int id;
@@ -14,26 +14,14 @@ public class Blog{
    private String content;
    private Date pupate;
 
-
-   @ManyToOne
-   @JoinColumn
-   private User user;
-
-   @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
-   private List<Image> imagelist;
-
    public Blog() {
    }
 
    public Blog(String title, String content, Date date) {
    }
 
-   public List<Image> getImagelist() {
-      return imagelist;
-   }
-   public void setImagelist(List<Image> imagelist){
-      this.imagelist=imagelist;
-   }
+
+
 
    public int getId() {
       return id;
@@ -74,8 +62,19 @@ public class Blog{
    public void setUser(User user) {
       this.user = user;
    }
+
+   public List<Image> getImageList() {
+      return imageList;
+   }
+
+   public void setImageList(List<Image> imageList) {
+      this.imageList = imageList;
+   }
+
+   @ManyToOne
+   @JoinColumn
+   private User user;
+
+   @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
+   private List<Image> imageList;
 }
-
-
-
-
