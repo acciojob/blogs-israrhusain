@@ -7,10 +7,7 @@ import com.driver.repositories.BlogRepository;
 import com.driver.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class BlogService {
@@ -33,7 +30,7 @@ public class BlogService {
           Blog blogger=new Blog(title,content,new Date());
           blogger.setUser(userRepository1.findById(userId).get());
           User user=userRepository1.findById(userId).get();
-          List<Blog> res=user.getBloglist();
+          List<Blog> res=user.getBlogList();
           user.setBloglist(res);
           blogRepository1.save(blogger);
           userRepository1.save(user);

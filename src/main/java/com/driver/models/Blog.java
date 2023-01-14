@@ -1,8 +1,9 @@
 package com.driver.models;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.*;
+
+
 
 @Entity
 @Table
@@ -12,7 +13,7 @@ public class Blog {
    private int id;
    private String title;
    private String content;
-   private Date pupDate;
+   private Date Date;
 
    public Blog() {
    }
@@ -48,11 +49,11 @@ public class Blog {
    }
 
    public Date getPupate() {
-      return pupDate;
+      return Date;
    }
 
    public void setPupate(Date pupate) {
-      this.pupDate = pupate;
+      this.Date = pupate;
    }
 
    public User getUser() {
