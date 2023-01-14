@@ -47,13 +47,6 @@ public class Blog {
       this.content = content;
    }
 
-//   public Date getPupate() {
-//      return Date;
-//   }
-
-//   public void setPupate(Date pupate) {
-//      this.Date = pupate;
-//   }
 
    public User getUser() {
       return user;
