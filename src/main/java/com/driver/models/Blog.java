@@ -12,7 +12,7 @@ public class Blog {
    private int id;
    private String title;
    private String content;
-   private Date Date;
+   private Date pubdate;
 
    public Blog() {
    }
@@ -20,8 +20,12 @@ public class Blog {
    public Blog(String title, String content, Date date) {
    }
 
-
-
+   public void setPubDate(Date pubdate){
+      this.pubdate=pubdate;
+   }
+   public Date getPubDate(){
+      return pubdate;
+   }
 
    public int getId() {
       return id;
