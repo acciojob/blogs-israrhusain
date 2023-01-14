@@ -1,7 +1,8 @@
 package com.driver.models;
 
 import javax.persistence.*;
-import java.util.*;
+import java.util.Date;
+import java.util.List;
 
 
 
