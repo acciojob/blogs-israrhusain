@@ -12,16 +12,7 @@ public class Blog{
    private int id;
    private String title;
    private String content;
-   private Date pubdate;
-
-   public Blog(String title, String content, Date pubdate) {
-      this.id = id;
-      this.title = title;
-      this.content = content;
-      this.pubdate = pubdate;
-      this.user = user;
-   }
-
+   private Date pupate;
 
 
    @ManyToOne
@@ -30,6 +21,12 @@ public class Blog{
 
    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
    private List<Image> imagelist;
+
+   public Blog() {
+   }
+
+   public Blog(String title, String content, Date date) {
+   }
 
    public List<Image> getImagelist() {
       return imagelist;
@@ -62,12 +59,12 @@ public class Blog{
       this.content = content;
    }
 
-   public Date getPubdate() {
-      return pubdate;
+   public Date getPupate() {
+      return pupate;
    }
 
-   public void setPubdate(Date pubdate) {
-      this.pubdate = pubdate;
+   public void setPupate(Date pupate) {
+      this.pupate = pupate;
    }
 
    public User getUser() {
