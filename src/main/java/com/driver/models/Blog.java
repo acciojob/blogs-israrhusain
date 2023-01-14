@@ -12,7 +12,7 @@ public class Blog {
    private int id;
    private String title;
    private String content;
-   private Date pupate;
+   private Date pupDate;
 
    public Blog() {
    }
@@ -48,11 +48,11 @@ public class Blog {
    }
 
    public Date getPupate() {
-      return pupate;
+      return pupDate;
    }
 
    public void setPupate(Date pupate) {
-      this.pupate = pupate;
+      this.pupDate = pupate;
    }
 
    public User getUser() {
