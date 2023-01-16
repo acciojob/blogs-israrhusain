@@ -37,7 +37,7 @@ public class BlogService {
         user.setBlogList(res);
 
         //Updating the userInformation and changing its blogs
-        blogRepository1.save(blogger);
+       // blogRepository1.save(blogger);
         userRepository1.save(user);
 
     }
