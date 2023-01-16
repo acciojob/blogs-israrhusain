@@ -30,6 +30,7 @@ public class ImageService {
          List<Image>list=blog.getImageList();
          list.add(image);
          blog.setImageList(list);
+         image.setBlog(blog);
          blogRepository.save(blog);
          return image;
     }
@@ -39,7 +40,7 @@ public class ImageService {
     }
 
     public Image findById(int id) {
-          return imageRepository2.findAll().get(id);
+          return imageRepository2.findById(id).get();
     }
 
     public int countImagesInScreen(Image image, String screenDimensions) {
