@@ -30,7 +30,7 @@ public class ImageService {
          
          List<Image> list=blog.getImageList();
          if(list==null){
-            list==new ArrayList<>();
+            list=new ArrayList<>();
           }
          list.add(image);
          blog.setImageList(list);
