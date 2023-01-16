@@ -27,8 +27,10 @@ public class BlogService {
 
     public void createAndReturnBlog(Integer userId, String title, String content) {
         //create a blog at the current time
-          Blog blogger=new Blog(title,content,new Date());
-
+          Blog blogger=new Blog();
+          blogger.set(userId);
+           blogger.set(title);
+           blogger.set(content);
 
         //updating the blog details
         blogger.setUser(userRepository1.findById(userId).get());
@@ -44,7 +46,7 @@ public class BlogService {
 
     public Blog findBlogById(int blogId){
         //find a blog
-        return blogRepository1.findAll().get(blogId);
+        return blogRepository1.findById(blogId).get();
     }
 
     public void addImage(Integer blogId, String description, String dimensions){
