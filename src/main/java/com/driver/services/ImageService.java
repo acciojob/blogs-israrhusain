@@ -26,11 +26,11 @@ public class ImageService {
         //blog.getImageList();
         image.setDescription(description);
         image.setDimensions(dimensions);
-
+        image.setBlog(blog);
          List<Image>list=blog.getImageList();
          list.add(image);
          blog.setImageList(list);
-         image.setBlog(blog);
+
          blogRepository.save(blog);
          return image;
     }
