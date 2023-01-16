@@ -29,9 +29,9 @@ public class BlogService {
         //create a blog at the current time
           Blog blogger=new Blog();
           //blogger.set(userId);
-           blogger.set(title);
-           blogger.set(content);
-           blogger.set(new Date); 
+           blogger.setTitle(title);
+           blogger.setContent(content);
+           blogger.setPubDate(new Date()); 
 
         //updating the blog details
         blogger.setUser(userRepository1.findById(userId).get());
